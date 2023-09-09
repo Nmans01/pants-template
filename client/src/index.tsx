@@ -5,6 +5,8 @@ import { Router } from "@solidjs/router";
 import './index.css';
 import { App } from './App';
 
+export const API_URL = import.meta.env.VITE_NEST_API_URL as string;
+
 const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {

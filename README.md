@@ -95,6 +95,9 @@ To get a local copy up and running follow these steps.
    npx prisma init
    ```
 4. Get a PostgreSQL Database and put the connection URL in the server/.env file.
+5. Fill out schema.prisma and run ```sh
+  prisma db push
+``` to format database using schema file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

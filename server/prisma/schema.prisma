@@ -11,10 +11,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// model Todo {
-//   id        Int      @default(autoincrement()) @id
-//   createdAt DateTime @default(now())
-//   updatedAt DateTime @updatedAt
-//   title     String
-//   done      Boolean  @default(false)
-// }
+// Example model
+model Todo {
+  id        Int      @default(autoincrement()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  done      Boolean  @default(false)
+}

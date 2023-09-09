@@ -1,5 +1,6 @@
 import { Component, createResource } from "solid-js";
 import { Page } from "./Page";
+import { API_URL } from "..";
 
 type Response = {
     message: string;
@@ -8,7 +9,7 @@ type Response = {
 export const Home: Component<{}> = (props) => {
 
     const [response] = createResource<Response>(() =>
-        fetch("http://localhost:3000/api").then((res) => res.json())
+        fetch(`${API_URL}/api`).then((res) => res.json())
     );
 
     const message = () => response.loading ? "Loading" : response.error ? "Error" : response()?.message;
